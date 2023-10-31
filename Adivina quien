@@ -1,0 +1,86 @@
+import random
+
+# Define una lista de personajes para el juego
+personajes = [
+    {
+personajes = [
+   
+
+personajes =
+"nombre": "Ana", "genero": "Femenino", "pelo": "Rubio", "ojos": "Marrones"},
+    {"nombre": "Carlos", "genero": "Masculino", "pelo": "Negro", "ojos": "Azules"},
+    # Agrega más personajes aquí
+]
+
+# Función para realizar una pregunta al jugador
+def hacer_pregunta(atributo):
+    
+   
+print(f"¿Tu personaje tiene {atributo.lower()}? (Sí/No)")
+    respuesta = 
+    respuesta
+input()
+    
+   
+return respuesta.lower() == "sí"
+
+# Función para adivinar el personaje del oponente
+def adivinar_personaje():
+    personaje_adivinado = random.choice(personajes)
+    
+    personaje_adivinado = random.choice(personajes)
+
+    personaje_adivinado = random.choice(person
+
+    personaje_adivinado =
+
+    personaje_adivin
+
+   
+print(f"¿Es tu personaje {personaje_adivinado['nombre']}?")
+    respuesta = 
+    respuesta =
+input()
+    
+   
+if respuesta.lower() == "sí":
+        print("¡He adivinado tu personaje!")
+    else:
+        print("¡Ups! No he adivinado tu personaje.")
+
+# Función principal del juego
+def jugar_adivina_quien():
+    print("Bienvenido a Adivina Quién")
+    print("Piensa en un personaje y responde las preguntas con 'Sí' o 'No'.")
+    
+    while True:
+        
+       
+print("\nSelecciona un atributo para preguntar (nombre, genero, pelo, ojos):")
+        atributo = 
+        atributo
+
+        atrib
+input()
+        
+        
+        
+       
+if atributo in ["nombre", "genero", "pelo", "ojos"]:
+            if hacer_pregunta(atributo):
+                print("Sí, el personaje tiene ese atributo.")
+            else:
+                print("No, el personaje no tiene ese atributo.")
+        else:
+            print("Atributo no válido. Elige entre nombre, genero, pelo ojos.")
+            continue
+
+        print("\n¿Quieres adivinar el personaje? (Sí/No)")
+        respuesta = input()
+        if respuesta.lower() == "sí":
+            adivinar_personaje()
+            break
+
+# Iniciar el juego
+if __name__ == "__main__":
+    jugar_adivina_quien()
